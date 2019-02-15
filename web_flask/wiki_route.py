@@ -7,6 +7,11 @@ from get_path import get_path
 app.url_map.strict_slashes = False
 
 
+@app.route('/')
+def index():
+    return render_template('index.html')
+
+
 @app.route('/web_flask/s_word/<s_word>/e_word/<e_word>', methods=["GET"])
 def result(state_id):
     """return the function"""
