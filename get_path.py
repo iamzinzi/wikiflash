@@ -83,10 +83,11 @@ def get_path(start, end):
         return [(page.title, page.url)]
     start, end = Node(wikipedia.page(start)), Node(wikipedia.page(end))
     unv, v, ret = [start], [], None
+    prev = None
     while (len(unv)):
         cur = unv[0]
         if cur.page.title == end.page.title:
-            cur.prev = v[-2]
+            cur.prev = prev
             ret = cur
             break
         # list of titles linked to cur
@@ -111,9 +112,11 @@ def get_path(start, end):
         if cur.page.url == end.page.url:
             ret = cur
         unv = unv[1:]
+        prev = cur
     return backref(ret) if ret else []
 
 
 
 if __name__ == "__main__":
+    #print(get_path("Task (project management)", 'Dependency (project management)'))
     print(get_path("Task (project management)", 'Project management'))
