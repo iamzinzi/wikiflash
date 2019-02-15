@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/version1.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>WikiFlash</title>
+    <meta property="og:url"           content="https://www.facebook.com/WikiFlash-312418092955542/" />
+    <meta property="og:type"          content="website" />
+    <meta property="og:title"         content="Wiki Flash" />
+    <meta property="og:description"   content="Searching Wiki from one page to another in a Flash!" />
+    <meta property="og:image"         content="images/manta-ray-black-silhouette.jpg" />
+  </head>
+  <body>
+    <div id="fb-root"></div>
+    <script async defer src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v3.2&appId=1206408229528403&autoLogAppEvents=1"></script>
+    <div id='container_id' class="container">
+      <div class="logo_box">
+        <img id='flash_logo' class='logo' src="images/manta-ray-black-silhouette.jpg" alt="logo">
+      </div>
+      <div class="word_input">
+        <form action="/action_page.py" method="get">
+          <input type="text" id="fname" name="firstname" placeholder="Your start word..">
+          <input type="text" id="lname" name="lastname" placeholder="Your end word..">
+          <input id='submit_it' type="button" value="Submit">
+        </form>
+        <a href="https://twitter.com/_WikiFlash_?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-size="large" data-show-count="false">Follow @_WikiFlash_</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <div class="fb-like" data-href="https://facebook.com/wikiFlash-312418092955542/" data-layout="standard" data-action="like" data-size="large" data-show-faces="true" data-share="true"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="display_wrapper">
+    <div class="status_box_id" id='status_box_id'>
+        <h3 id='demo'></h3>
+        <div class="">
+
+        <h3 id='demo'>LOADING.....</h3>
+        <div class="start">
+            <h3 class="status">Status:</h3>
+            <h2>Start Word</h2>
+        </div>
+        <div class="finish">
+            <h3 class="status">Status:</h3>
+            <h2>End Word</h2>
+        </div>
+        <div class="jumps">
+            <h2> Total Jumps </h2>
+        </div>
+        <div class="links">
+            <h2> Link Path </h2>
+        </div>
+        <button id="return_button" type="button" name="button" value="Refresh Page" onClick="refresh">Return</button>
+    </div>
+  </div>
+    <script src="jsfolder\first.js"></script>
+  </body>
+</html>
