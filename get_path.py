@@ -5,6 +5,23 @@ import requests
 import wikipedia
 Node = __import__('node').Node
 
+def is_place(place_name):
+    """is_place takes a string argument, creates a wikipedia object,
+    and checks if it's a city, state, or country. Returns True if string
+    argument is a city, state, or country. False otherwise.
+    """
+    filters = ['city', 'state', 'country']
+
+    try:
+        place = wikipedia.page(place_name)
+    except wikipedia.exceptions.DisambiguationError as e:
+        place = wikipedia.page(e.options[0])
+    first_paragraph = place.summary.split('\n')[0]
+    for f in filters:
+        if f in first_paragraph:
+            return True
+    return False
+
 def validate(word):
     try:
         page = wikipedia.page(word)
@@ -77,7 +94,7 @@ def get_path(start, end):
         # append and mark neighbors
         for link in links:
             if not in_list(link, v) and not in_list(link, unv):
-                if not has_num(link):
+                if not has_num(link) and not is_place(link):
                     try:
                         node = Node(wikipedia.page(link))
                         unv.append(node)
