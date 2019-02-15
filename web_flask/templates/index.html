@@ -28,18 +28,37 @@
 
         <h3 id='demo'>LOADING.....</h3>
         <div class="start">
-            <h3 class="status">Status:</h3>
-            <h2>Start Word</h2>
+	        {% if lis[0] == 1 -%}
+                <h3 class="status">Status: Start word not found</h3>
+	            {%- else -%}
+	            <h3 class="status">Status: FOUND!</h3>
+	            {%- endif -%}
+                <h2>{{start_word}}</h2>
         </div>
         <div class="finish">
-            <h3 class="status">Status:</h3>
-            <h2>End Word</h2>
+	        {% if lis[0] == 2 -%}
+                <h3 class="status">Status: End word not found</h3>
+	            {%- else -%}
+	            <h3 class="status">Status: FOUND!</h3>
+	            {%- endif -%}
+                <h2>{{end_word}}</h2>
         </div>
         <div class="jumps">
-            <h2 class="title"> Total Jumps </h2>
+	        {% if lis[0] == 3 -%}
+                <h3 class="title">No path found</h3>
+	            {%- else -%}
+	            <h2 class="title">{{lis[1]|length}} Jumps</h2>
+	            {%- endif -%}
         </div>
         <div class="links">
-            <h2 class="title"> Link Path </h2>
+	        {% if lis[1]|length == 0 -%}
+	        <h3 class="title">No path found</h3>
+	        {%- else -%}
+	        <h2 class="title">Link Path</h2>
+	        {%- endif -%}
+	        {% for l in lis %}
+	           {{l|pprint}};
+	        {% endfor %}
         </div>
         <button id="return_button" type="button" name="button" value="Refresh Page" onClick="refresh">Return</button>
     </div>
