@@ -73,15 +73,17 @@ def get_path(start, end):
     v1, v2 = validate(start), validate(end)
     if not v1 or not v2:
         if not v1 and not v2:
-            return 3
+            return [3, []]
         if not v1:
-            return 1
+            return [1, []]
         if not v2:
-            return 2
+            return [2, []]
     if start == end:
         page = wikipedia.page(start)
         return [(page.title, page.url)]
     start, end = Node(wikipedia.page(start)), Node(wikipedia.page(end))
+    if end.page.title in start.page.links:
+        return [0, [(start.page.title, start.page.url), (end.page.title, end.page.url)]]
     unv, v, ret = [start], [], None
     prev = None
     while (len(unv)):
@@ -113,10 +115,10 @@ def get_path(start, end):
             ret = cur
         unv = unv[1:]
         prev = cur
-    return backref(ret) if ret else []
+    return [0, backref(ret)] if ret else [0, []]
 
 
 
 if __name__ == "__main__":
     #print(get_path("Task (project management)", 'Dependency (project management)'))
-    print(get_path("Task (project management)", 'Project management'))
+    print(get_path("Task (project management)", 'Task management'))
