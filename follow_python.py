@@ -10,7 +10,7 @@ api = tweepy.API(auth)
 
 # For loop to iterate over tweets with #ocean, limit to 10
 for tweet in tweepy.Cursor(api.search,
-                           q='#wikipedia').items(200):
+                           q='#python').items(200):
 
     try:
         # Favorite the tweet
@@ -24,6 +24,7 @@ for tweet in tweepy.Cursor(api.search,
         if not tweet.user.following:
             tweet.user.follow()
             print('Followed @' + tweet.user.screen_name)
+
         sleep(3)
     except tweepy.TweepError as e:
         print(e.reason)
