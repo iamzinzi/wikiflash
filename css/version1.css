@@ -129,3 +129,21 @@ h3.status {
     font-family: Arial Narrow,Arial,sans-serif;
 }
 /* end here */
+
+/*All mailchimp related stuff here*/
+#mc_embed_signup_scroll {
+  display: flex;
+  align-items: center;
+  padding-left: 23%;
+}
+
+.email {
+  text-align: center;
+  padding: 2px 5px;
+  margin: 0px 8px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  box-sizing: border-box;
+}
+/*end here*/
