@@ -5,15 +5,8 @@
     <link rel="stylesheet" type="text/css" href="css/version1.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <title>WikiFlash</title>
-    <meta property="og:url"           content="https://www.facebook.com/WikiFlash-312418092955542/" />
-    <meta property="og:type"          content="website" />
-    <meta property="og:title"         content="Wiki Flash" />
-    <meta property="og:description"   content="Searching Wiki from one page to another in a Flash!" />
-    <meta property="og:image"         content="images/manta-ray-black-silhouette.jpg" />
   </head>
   <body>
-    <div id="fb-root"></div>
-    <script async defer src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v3.2&appId=1206408229528403&autoLogAppEvents=1"></script>
     <div id='container_id' class="container">
       <div class="logo_box">
         <img id='flash_logo' class='logo' src="images/manta-ray-black-silhouette.jpg" alt="logo">
@@ -24,8 +17,6 @@
           <input type="text" id="lname" name="lastname" placeholder="Your end word..">
           <input id='submit_it' type="button" value="Submit">
         </form>
-        <a href="https://twitter.com/_WikiFlash_?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-size="large" data-show-count="false">Follow @_WikiFlash_</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-        <div class="fb-like" data-href="https://facebook.com/wikiFlash-312418092955542/" data-layout="standard" data-action="like" data-size="large" data-show-faces="true" data-share="true"></div>
       </div>
     </div>
   </div>
@@ -37,18 +28,37 @@
 
         <h3 id='demo'>LOADING.....</h3>
         <div class="start">
-            <h3 class="status">Status:</h3>
-            <h2>Start Word</h2>
+	        {% if lis[0] == 1 -%}
+                <h3 class="status">Status: Start word not found</h3>
+	            {%- else -%}
+	            <h3 class="status">Status: FOUND!</h3>
+	            {%- endif -%}
+                <h2>{{start_word}}</h2>
         </div>
         <div class="finish">
-            <h3 class="status">Status:</h3>
-            <h2>End Word</h2>
+	        {% if lis[0] == 2 -%}
+                <h3 class="status">Status: End word not found</h3>
+	            {%- else -%}
+	            <h3 class="status">Status: FOUND!</h3>
+	            {%- endif -%}
+                <h2>{{end_word}}</h2>
         </div>
         <div class="jumps">
-            <h2 class="title"> Total Jumps </h2>
+	        {% if lis[0] == 3 -%}
+                <h3 class="title">No path found</h3>
+	            {%- else -%}
+	            <h2 class="title">{{lis[1]|length}} Jumps</h2>
+	            {%- endif -%}
         </div>
         <div class="links">
-            <h2 class="title"> Link Path </h2>
+	        {% if lis[1]|length == 0 -%}
+	        <h3 class="title">No path found</h3>
+	        {%- else -%}
+	        <h2 class="title">Link Path</h2>
+	        {%- endif -%}
+	        {% for l in lis %}
+	           {{l|pprint}};
+	        {% endfor %}
         </div>
         <button id="return_button" type="button" name="button" value="Refresh Page" onClick="refresh">Return</button>
     </div>
