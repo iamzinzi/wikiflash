@@ -10,7 +10,8 @@
  * in this page, you find a link to “continents” => https://en.wikipedia.org/wiki/Continent
  * in this new page, you find a link to “Antartica” => https://en.wikipedia.org/wiki/Antarctica
  * and finally, you find the word “Mikhail Lazarev” => https://en.wikipedia.org/wiki/Mikhail_Lazarev
-So the path for Cucumber -> Mikhail Lazarev is: Cucumber -> Continent -> Antartica -> Mikhail Lazarev = 3 steps
+
+* So the path for Cucumber -> Mikhail Lazarev is: Cucumber -> Continent -> Antartica -> Mikhail Lazarev = 3 steps
 
 The product promises to take wikipedia’s basic search functionality to a new level where the user can interact and play with the shared knowledge Wikipedia provides, as well as making the search process fun.
 
