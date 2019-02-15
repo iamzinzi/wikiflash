@@ -3,7 +3,7 @@
 """
 import requests
 import wikipedia
-Node = __import__('node').Node
+from web_flask.node import Node
 
 def is_place(place_name):
     """is_place takes a string argument, creates a wikipedia object,
