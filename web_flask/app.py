@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+
 """
 starts a Flash web app
 """
@@ -16,8 +17,8 @@ def index():
 @app.route('/login', methods=["GET", "POST"])
 def result():
     """return the function"""
-    s_word = request.form['s_word']
-    e_word = request.form['e_word']
+    s_word = request.form['firstname']
+    e_word = request.form['lastname']
     lis = get_path(s_word, e_word)
     return render_template('index.html', lis)
 
