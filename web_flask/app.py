@@ -17,9 +17,10 @@ def index():
 @app.route('/login', methods=["GET", "POST"])
 def result():
     """return the function"""
-    s_word = request.form['firstname']
-    e_word = request.form['lastname']
-    lis = get_path.get_path(s_word, e_word)
+    s_word = 'Cucumber' #request.form['firstname']
+    e_word = 'Antarctica' #request.form['lastname']
+    lis = get_path(s_word, e_word)
+    print(lis)
     return render_template('index.html', lis)
 
 
