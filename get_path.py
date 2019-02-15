@@ -86,7 +86,7 @@ def get_path(start, end):
     while (len(unv)):
         cur = unv[0]
         if cur.page.title == end.page.title:
-            cur.prev = v[-1]
+            cur.prev = v[-2]
             ret = cur
             break
         # list of titles linked to cur
@@ -98,6 +98,7 @@ def get_path(start, end):
                     try:
                         node = Node(wikipedia.page(link))
                         unv.append(node)
+                        print(cur.page.title, '->', node.page.title)
                         node.dist, node.prev = cur.dist + 1, cur
                     except:
                         pass
