@@ -4,9 +4,7 @@
 
 # Product Synopsis
 
-> Wiki Flash is a game that helps you find the degrees of separation between two wikipedia pages. The search takes a minimun of two words, and they can be as random as, for example:
-
-"cucumber" and "Mikhail Lazarev".
+> Wiki Flash is a game that helps you find the degrees of separation between two wikipedia pages. The search takes a minimun of two words, and they can be as random as, for example: "cucumber" and "Mikhail Lazarev".
 
  * first page: https://en.wikipedia.org/wiki/Cucumber
  * in this page, you find a link to “continents” => https://en.wikipedia.org/wiki/Continent
@@ -21,7 +19,16 @@ The product promises to take wikipedia’s basic search functionality to a new l
 Batoidea LLC is a company founded on Valentine’s Day, February 14th, 2019. The mission of Batoidea is to deliver innovative products that enhances user experience with platforms they interact with daily. The Company Core values entail Teamwork, Responsiveness, Creativity, and Fun.
 
 
-## File | Description
+---
+File|Task
+---|---
+ * web_flask/app.py | Flask mudule to connect front-end and back-end. It will take
+input data and pass to core-algo function and return result, gererate a content.
+ * web_flask/get_path.py | Python module to transfer input to output by algorithms.
+ * web_flask/node.py | Data Structure.
+ * web_flask/templates/index.html | HTML content of web
+ * web_flask/static/styles/version1.css | CSS file for styling the webpage
+ * web_flask/static/js/first.js | JavaScript file for making animation.
 
 
 ## Environment
