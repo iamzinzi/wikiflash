@@ -23,13 +23,12 @@ Batoidea LLC is a company founded on Valentine’s Day, February 14th, 2019. The
 ---
 File|Task
 ---|---
- * web_flask/app.py | Flask mudule to connect front-end and back-end. It will take
-input data and pass to core-algo function and return result, gererate a content.
- * web_flask/get_path.py | Python module to transfer input to output by algorithms.
- * web_flask/node.py | Data Structure.
- * web_flask/templates/index.html | HTML content of web
- * web_flask/static/styles/version1.css | CSS file for styling the webpage
- * web_flask/static/js/first.js | JavaScript file for making animation.
+|  web_flask/app.py | Flask module to connect front-end and back-end. It will take input data and pass to core-algo function and return result, gererate a content.|
+|  web_flask/get_path.py | Python module to transfer input to output by algorithms.|
+|  web_flask/node.py | Data Structure.|
+|  web_flask/templates/index.html | HTML content of web.|
+|  web_flask/static/styles/version1.css | CSS file for styling the webpage.|
+|  web_flask/static/js/first.js | JavaScript file for making animation.|
 
 
 ## Environment
@@ -52,17 +51,17 @@ Anne-Sophie Le Bloas - [Github](https://github.com/aslebloas) / [Twitter](https:
 Stephen Chu - [Github](https://github.com/stephenchu530) / [Twitter](https://twitter.com/StephenChu530)
 
 #### Front-end Team
-Cameron Eng - [github](https://github.com/c-eng) / [Twitter](https://twitter.com/BynLeung)
-Canese Curvin - [Github](https://github.com/ceecurvin) / [Twitter](https://twitter.com/cscurvin1)
-Heindrick Cheung - [Github](https://github.com/hcheung01) / [Twitter](https://twitter.com/HeindrickCheung)
-Jennifer Ogden - [Github](https://github.com/jogden4195) / [Twitter](https://twitter.com/jogden95)
+Cameron Eng - [github](https://github.com/c-eng) / [Twitter](https://twitter.com/BynLeung)  
+Canese Curvin - [Github](https://github.com/ceecurvin) / [Twitter](https://twitter.com/cscurvin1)  
+Heindrick Cheung - [Github](https://github.com/hcheung01) / [Twitter](https://twitter.com/HeindrickCheung)  
+Jennifer Ogden - [Github](https://github.com/jogden4195) / [Twitter](https://twitter.com/jogden95)  
 
 
 #### Back-end Team
-Damon Nyhan - [Github](https://github.com/anovacap) / [Twitter](https://twitter.com/anovacap)
-Jack Cuong Tran - [Github](https://github.com/JackWanaCode) / [Twitter](https://twitter.com/JackWanaCode)
-Jinji Zhang - [Github](https://github.com/iamzinzi) / [Twitter](https://twitter.com/hizinzi)
-Rui Feng - [Github](https://github.com/Rd-Feng) / [Twitter](https://twitter.com/FengRui94)
+Damon Nyhan - [Github](https://github.com/anovacap) / [Twitter](https://twitter.com/anovacap)  
+Jack Cuong Tran - [Github](https://github.com/JackWanaCode) / [Twitter](https://twitter.com/JackWanaCode)  
+Jinji Zhang - [Github](https://github.com/iamzinzi) / [Twitter](https://twitter.com/hizinzi)  
+Rui Feng - [Github](https://github.com/Rd-Feng) / [Twitter](https://twitter.com/FengRui94)  
 
 
 #### Marketing
@@ -70,4 +69,4 @@ Leine Francesca Valente - [Github](https://github.com/leinefran) / [Twitter](htt
 
 
 ## License
-Public Domain. No copy write protection.
+Public Domain. No copyright protection.
